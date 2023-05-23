@@ -1,0 +1,8 @@
+{% block content %}
+  <h1>Добавить комментарий</h1>
+  <form method="post" action="{% url 'add_comment' post_id=post.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить комментарий</button>
+  </form>
+{% endblock %}
